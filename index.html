@@ -3,43 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquaplano - Bar Musicale</title>
+  <title>Playlist - Aquaplano</title>
   <style>
     body {
-      font-family: sans-serif;
-      padding: 1rem;
-      line-height: 1.6;
+      font-family: 'Georgia', serif;
+      padding: 1.5rem;
+      background: #fdfdfd;
+      color: #222;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    #now-playing {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 1.2rem 0;
+    }
+    audio {
+      width: 100%;
+      max-width: 600px;
     }
     button {
-      margin: 0.5rem 0.5rem 0 0;
-      padding: 0.6rem 1rem;
+      margin: 1rem 0.5rem;
+      padding: 0.7rem 1.2rem;
       font-size: 1rem;
       border-radius: 8px;
       border: none;
-      background: #444;
+      background: #222;
       color: white;
       cursor: pointer;
     }
     button:hover {
-      background: #222;
-    }
-    #now-playing {
-      font-weight: bold;
-      margin-top: 1rem;
+      background: #000;
     }
   </style>
 </head>
 <body>
 
-  <h1>Aquaplano</h1>
-  <p>Benvenuto nel bar musicale galleggiante di Anton.<br>
-  Clicca su <strong>Avvia Playlist</strong> per iniziare il viaggio.</p>
+  <h1>Aquaplano - Playlist</h1>
+  <p id="now-playing">🎶 Nessun brano in riproduzione</p>
 
-  <h3 id="now-playing">🎶 Nessun brano in riproduzione</h3>
-
-  <audio id="player" controls style="width: 100%; max-width: 500px;"></audio>
-  <br><br>
-
+  <audio id="player" controls></audio>
+  <br>
   <button onclick="startPlaylist()">▶️ Avvia Playlist</button>
   <button onclick="previousTrack()">⏮️ Indietro</button>
   <button onclick="nextTrack()">⏭️ Avanti</button>
