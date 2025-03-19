@@ -9,41 +9,54 @@
       margin: 0;
       padding: 2rem;
       font-family: 'Georgia', serif;
-      background: url('Aguaplano.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #111;
       color: #fff;
       text-align: center;
-      backdrop-filter: blur(2px) brightness(0.8);
     }
+
     h1 {
       font-size: 2.5rem;
-      text-shadow: 1px 1px 2px #000;
+      margin-bottom: 0.5rem;
     }
+
     #now-playing {
-      margin: 1.5rem 0;
+      margin: 1rem 0;
       font-weight: bold;
       font-size: 1.2rem;
-      text-shadow: 1px 1px 2px #000;
     }
+
     audio {
       width: 100%;
       max-width: 600px;
-      margin: 1rem 0;
-      backdrop-filter: blur(3px);
+      margin: 1rem auto;
+      display: block;
     }
+
     button {
       margin: 0.5rem;
       padding: 0.7rem 1.2rem;
       font-size: 1rem;
       border-radius: 8px;
       border: none;
-      background: rgba(0, 0, 0, 0.7);
+      background: #444;
       color: white;
       cursor: pointer;
-      backdrop-filter: blur(3px);
     }
+
     button:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: #222;
+    }
+
+    .cover {
+      margin-top: 2rem;
+    }
+
+    .cover img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border: 5px solid #333;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
   </style>
 </head>
@@ -53,10 +66,16 @@
   <p id="now-playing">🎶 Nessun brano in riproduzione</p>
 
   <audio id="player" controls></audio>
-  <br>
-  <button onclick="startPlaylist()">▶️ Avvia Playlist</button>
-  <button onclick="previousTrack()">⏮️ Indietro</button>
-  <button onclick="nextTrack()">⏭️ Avanti</button>
+
+  <div>
+    <button onclick="startPlaylist()">▶️ Avvia Playlist</button>
+    <button onclick="previousTrack()">⏮️ Indietro</button>
+    <button onclick="nextTrack()">⏭️ Avanti</button>
+  </div>
+
+  <div class="cover">
+    <img src="Aguaplano.jpg" alt="Copertina Aguaplano">
+  </div>
 
   <script>
     const playlist = [
