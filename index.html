@@ -9,34 +9,43 @@
   <p>Benvenuto nel bar musicale galleggiante di Anton.<br>
   Clicca su <strong>Avvia Playlist</strong> per iniziare il viaggio.</p>
 
+  <h3 id="now-playing">🎶 Nessun brano in riproduzione</h3>
+
   <audio id="player" controls style="width: 100%; max-width: 500px;"></audio>
   <br><br>
   <button onclick="startPlaylist()">🎵 Avvia Playlist</button>
 
   <script>
-    // Inserisci qui i tuoi file audio
     const playlist = [
-      'Aguaplano.mp3',
-      'Baci senza memoria.mp3',
-      'Languida.mp3',
-      'Paso doble.mp3',
-      'Max.mp3'
+      { title: 'Aguaplano', file: 'Aguaplano.mp3' },
+      { title: 'Baci senza memoria', file: 'Baci senza memoria.mp3' },
+      { title: 'Languida', file: 'Languida.mp3' },
+      { title: 'Paso doble', file: 'Paso doble.mp3' },
+      { title: 'Max', file: 'Max.mp3' }
     ];
 
     let current = 0;
     const player = document.getElementById('player');
+    const nowPlaying = document.getElementById('now-playing');
+
+    function playCurrentTrack() {
+      const track = playlist[current];
+      player.src = track.file;
+      nowPlaying.textContent = `🎶 In riproduzione: ${track.title}`;
+      player.play();
+    }
 
     function startPlaylist() {
       current = 0;
-      player.src = playlist[current];
-      player.play();
+      playCurrentTrack();
     }
 
     player.addEventListener('ended', () => {
       current++;
       if (current < playlist.length) {
-        player.src = playlist[current];
-        player.play();
+        playCurrentTrack();
+      } else {
+        nowPlaying.textContent = '🎵 Playlist terminata.';
       }
     });
   </script>
