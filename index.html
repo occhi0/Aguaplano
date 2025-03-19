@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aguaplano - Playlist</title>
   <style>
     body {
       margin: 0;
       padding: 2rem;
       font-family: 'Georgia', serif;
-      background: #111;
-      color: #fff;
+      background: #0d1b2a;
+      color: #ffffff;
       text-align: center;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 2px #000;
     }
 
     #now-playing {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       font-weight: bold;
       font-size: 1.2rem;
+      text-shadow: 1px 1px 2px #000;
     }
 
     audio {
@@ -38,13 +40,16 @@
       font-size: 1rem;
       border-radius: 8px;
       border: none;
-      background: #444;
+      background: #003566;
       color: white;
       cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 85, 170, 0.5);
+      transition: background 0.3s, transform 0.2s;
     }
 
     button:hover {
-      background: #222;
+      background: #001f3f;
+      transform: scale(1.05);
     }
 
     .cover {
@@ -55,8 +60,8 @@
       max-width: 300px;
       width: 100%;
       height: auto;
-      border: 5px solid #333;
-      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+      border: 4px solid #001f3f;
+      box-shadow: 0 0 20px rgba(0, 85, 170, 0.4);
     }
   </style>
 </head>
