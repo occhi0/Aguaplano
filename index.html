@@ -71,16 +71,27 @@
   <p><em style="font-size: 1.4rem;">Paolo Conte</em></p>
   <p id="now-playing">🎶 Nessun brano in riproduzione</p>
 
-  <audio id="player" controls></audio>
+ <div style="margin: 1.5rem 0;">
+   <button onclick="startPlaylist()" style="
+     background-color: #28a745;
+     color: white;
+     padding: 0.7rem 1.5rem;
+     border: none;
+     border-radius: 8px;
+     font-size: 1rem;
+     cursor: pointer;
+     box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+     transition: background 0.3s, transform 0.2s;
+   ">▶️ Avvia Playlist</button>
+ </div>
 
-  <div>
-    <button onclick="startPlaylist()">▶️ Avvia Playlist</button>
-  </div>
-  <div>
-    <button onclick="previousTrack()">⏮️ Indietro</button>
-    <button onclick="nextTrack()">⏭️ Avanti</button>
-  </div>
+ <audio id="player" controls></audio>
 
+ <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem;">
+   <button onclick="previousTrack()">⏮️ Indietro</button>
+   <button onclick="nextTrack()">⏭️ Avanti</button>
+ </div>
+  
   <div class="cover">
     <img src="Aguaplano.jpg" alt="Copertina Aguaplano">
   </div>
