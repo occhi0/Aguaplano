@@ -3,46 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playlist - Aguaplano</title>
+  <title>Aquaplano - Playlist</title>
   <style>
     body {
+      margin: 0;
+      padding: 2rem;
       font-family: 'Georgia', serif;
-      padding: 1.5rem;
-      background: #fdfdfd;
-      color: #222;
+      background: url('Aguaplano.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
       text-align: center;
+      backdrop-filter: blur(2px) brightness(0.8);
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 2px #000;
     }
     #now-playing {
+      margin: 1.5rem 0;
       font-weight: bold;
-      font-size: 1.1rem;
-      margin: 1.2rem 0;
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px #000;
     }
     audio {
       width: 100%;
       max-width: 600px;
+      margin: 1rem 0;
+      backdrop-filter: blur(3px);
     }
     button {
-      margin: 1rem 0.5rem;
+      margin: 0.5rem;
       padding: 0.7rem 1.2rem;
       font-size: 1rem;
       border-radius: 8px;
       border: none;
-      background: #222;
+      background: rgba(0, 0, 0, 0.7);
       color: white;
       cursor: pointer;
+      backdrop-filter: blur(3px);
     }
     button:hover {
-      background: #000;
+      background: rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
 <body>
 
-  <h1>Aguaplano - Playlist</h1>
+  <h1>Aquaplano</h1>
   <p id="now-playing">🎶 Nessun brano in riproduzione</p>
 
   <audio id="player" controls></audio>
