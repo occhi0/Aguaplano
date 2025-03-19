@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquaplano</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #111;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      border: 5px solid #444;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    h1 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #e63946;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background: #b02a35;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="Aguaplano.jpg" alt="Copertina Aguaplano">
+  <h1>Aquaplano</h1>
+  <p>Una playlist notturna, un bar galleggiante,<br>una voce che naviga nella memoria.</p>
+
+  <a href="playlist.html">🎧 Entra nel suono</a>
+
+</body>
+</html>
