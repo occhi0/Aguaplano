@@ -2,10 +2,43 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Bar Musicale</title>
+  <title>Aquaplano - Bar Musicale</title>
 </head>
 <body>
-  <h1>Benvenuto al Bar Musicale!</h1>
-  <p>Playlist in arrivo...</p>
+  <h1>Aquaplano</h1>
+  <p>Benvenuto nel bar musicale galleggiante di Anton.<br>
+  Clicca su <strong>Avvia Playlist</strong> per iniziare il viaggio.</p>
+
+  <audio id="player" controls style="width: 100%; max-width: 500px;"></audio>
+  <br><br>
+  <button onclick="startPlaylist()">🎵 Avvia Playlist</button>
+
+  <script>
+    // Inserisci qui i tuoi file audio
+    const playlist = [
+      'Aguaplano.mp3',
+      'Baci senza memoria.mp3',
+      'Languida.mp3',
+      'Paso doble',
+      'Max'
+    ];
+
+    let current = 0;
+    const player = document.getElementById('player');
+
+    function startPlaylist() {
+      current = 0;
+      player.src = playlist[current];
+      player.play();
+    }
+
+    player.addEventListener('ended', () => {
+      current++;
+      if (current < playlist.length) {
+        player.src = playlist[current];
+        player.play();
+      }
+    });
+  </script>
 </body>
 </html>
